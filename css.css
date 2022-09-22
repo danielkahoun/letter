@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Roboto&display=swap');
+
+/* Bonus cviceni */
+button[name="magic"]:hover + * {
+    background-color: grey;
+    color: darkslateblue;
+    font-size: 110%;
+}
+
+button[name="magic"]:hover + * h1, button[name="magic"]:hover + * h2 {
+    font-family: 'Bungee Spice', cursive;
+}
+
+/* */
+
+address {
+    background-color: rgb(224, 224, 224);
+    border: solid 2px rgb(218, 218, 218);
+}
+
+address strong {
+    font-size: 125%;
+}
+
+address p {
+    font-style: normal;
+}
+
+
+address, address+p {
+    display: inline-flex;
+}
+
+main {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+main a {
+    text-decoration: none;
+}
+
+main a:visited {
+    color: purple;
+}
+
+main ul li {
+    list-style-type: none;
+}
+
+main ol li {
+    list-style-type: upper-roman;
+}
+
+main dl dd {
+    display: none;
+}
+
+main dl dt:hover + dd {
+    display: block;
+}
+
+
+/* Create a css rule for targeting only external links. Differentiate such links from the other links */
+main a[href^="https://"] {
+    color: red;
+    font-weight: 700;
+}
+main a[href^="https://"]:after {
+    content: " (externi odkaz)";
+}
+
+/* Create a css rule for targeting first line of the first paragraph after each heading. Differentiate such targeted (pseudo)elements */
+
+h1 + p::first-line, h2 + p::first-line {
+    font-style: italic;
+    color: blue;
+}
